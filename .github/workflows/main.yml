@@ -16,7 +16,7 @@ jobs:
 
       - name: Make changes
         run: |
-          echo "Last run: $(date -u)" > last_run.txt
+          echo "Last run: $(date -u)" > changelog.txt
 
       - name: Commit changes - Your Email 23f2004837@ds.study.iitm.ac.in
         run: |
