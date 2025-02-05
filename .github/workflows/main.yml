@@ -18,7 +18,7 @@ jobs:
 
       - name: Commit changes - Your Email 23f2004837@ds.study.iitm.ac.in
         run: |
-          git config --global user.name "GitHub Action"
+          git config --global user.name "23f2004837"
           git config --global user.email "23f2004837@ds.study.iitm.ac.in"
           git add last_run.txt
           git commit -m "Daily update: $(date -u)" || exit 0  # Avoid failure if no changes
