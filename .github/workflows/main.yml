@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Running
+    - name: Commit changes - Your Email 23f2004837@ds.study.iitm.ac.in
       run: |
         echo "Running!"
