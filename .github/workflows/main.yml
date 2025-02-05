@@ -9,7 +9,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Commit changes - Your Email 23f2004837@ds.study.iitm.ac.in
-      run: |
-        echo "Running!"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make changes
+        run: |
+          echo "Last run: $(date -u)" > last_run.txt
+
+      - name: Commit changes - Your Email 23f2004837@ds.study.iitm.ac.in
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "23f2004837@ds.study.iitm.ac.in"
+          git add last_run.txt
+          git commit -m "Daily update: $(date -u)" || exit 0  # Avoid failure if no changes
+          git push
